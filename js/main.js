@@ -5,7 +5,7 @@ const errorText = document.querySelector('.error-input');
 inputButton.addEventListener('click', () => {
     const nameCharacter = inputForm.value;
     if (nameCharacter != '') {
-        window.location.href = 'home.html';
+        window.location.href = './pages/home.html';
     } else {
         errorText.style.display = 'block';
     }
