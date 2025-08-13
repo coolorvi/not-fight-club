@@ -4,6 +4,7 @@ const errorText = document.querySelector('.error-input');
 
 inputButton.addEventListener('click', () => {
     const nameCharacter = inputForm.value;
+    localStorage.setItem('username', nameCharacter);
     if (nameCharacter != '') {
         window.location.href = './pages/home.html';
     } else {
