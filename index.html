@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Not Fight Club</title>
+    <script defer src="./js/main.js"></script>
 </head>
 <body>
-
+    <main>
+        <div class="main-container">
+            <h1>Welcome to the Not Fight Club!</h1>
+            <h2>Create your character</h2>
+            <div class="input-name-form">
+                <label for="inputName">Character name:</label>
+                <input type="text" id="inputNameForm" name="characterName" placeholder="Enter the character's name">
+                <p class="error-input">Incorrect input</p>
+                <button type="submit" id="inputNameButton">Create character</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
