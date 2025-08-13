@@ -59,3 +59,9 @@ button {
     font-family: 'Russo One', sans-serif;
     font-size: 20px;
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: #ddd5c4;
+    color: #ff4d4d;
+}
