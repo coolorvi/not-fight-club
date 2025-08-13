@@ -43,19 +43,70 @@ p {
 }
 
 main {
+    position: relative;
     flex: 1;
     background-color: #2a2a38;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 40px;
     justify-content: center;
     align-items: center;
 }
 
-button {
-    padding: 10px 40px 10px 40px;
-    border-radius: 20px;
-    color: #ddd5c4;
-    background-color: #ff4d4d;
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    color: #1abc9c;
+}
+
+.username-field-input {
+    display: none;
+}
+
+.username-field-button {
+    background-color: #1abc9c;
+    border: none;
+    color: #2a2a38;
     font-family: 'Russo One', sans-serif;
     font-size: 20px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgb(26 188 156 / 0.4);
+}
+
+.username-field-button:hover {
+    background-color: #16a085;
+    color: #f0f0f0;
+    box-shadow: 0 6px 12px rgb(22 160 133 / 0.7);
+}
+
+.incorrect-input {
+    position: absolute;
+    top: 300px;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: red;
+    border: 2px solid red;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.username-field-input {
+    display: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 2px solid #1abc9c;
+    border-radius: 8px;
+    background-color: #2a2a38;
+    color: #1abc9c;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
 }
