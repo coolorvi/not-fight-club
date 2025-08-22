@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1f1f2a;
+}
+
+.icons {
+    display: flex;
+    padding: 20px 20px 20px 0;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+}
+
+svg path {
+    fill: rgb(221, 213, 196);
+    transition: fill 0.3 ease;
+}
+
+svg:hover path {
+    cursor: pointer;
+    fill: rgb(255, 77, 77);
+}
+
+p {
+    color: #ddd5c4;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    padding: 25px 40px 0 40px;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    background-color: #2a2a38;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    margin: 0 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-container, .enemy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.character-img {
+    width: 480px;
+    height: 1000px;
+}
+
+h1 {
+    color: #ddd5c4;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+}
+
+.choice-table-container {
+    height: 500px;
+    background-color: #3a3a4d;
+    border-radius: 20px;
+}
+
+.choice-table {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border: 2px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    color: #ddd5c4;
+    font-family: 'Russo One', sans-serif;
+    max-width: 700px;
+}
+
+.choice-table-attack-zones, .choice-table-defence-zones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.choice-table h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #f5c542;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.choice-table label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.choice-table label:hover {
+    transform: scale(1.05);
+}
+
+.choice-table input[type="radio"],
+.choice-table input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.input-zones-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff4d4d, #cc0000);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+}
+
+.input-zones-button:hover {
+    background: linear-gradient(135deg, #ff6666, #e60000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.input-zones-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+progress {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    appearance: none;
+    accent-color: green;
+}
+
+.logs-field {
+    margin-top: 146px;
+    width: 99.2%;
+    height: 221px;
+    overflow-y: auto;
+    background-color: #1f1f2a;
+    border: 1px solid #444;
+    padding: 8px;
+    background: #111;
+    color: #eee;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.logs-field::-webkit-scrollbar {
+    width: 10px;
+}
+
+.logs-field::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 5px;
+}
+
+.logs-field::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 5px;
+    border: 2px solid #111;
+}
+
+.logs-field::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+.hero-name, .enemy-name {
+    text-align: center;
+    color: #ddd5c4;
+    font-family: 'Russo One', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+
+.modal-content h2 {
+    margin-bottom: 15px;
+  }
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    transition: 0.3s;
+  }
+
+.modal-content button:hover {
+    background: #0056b3;
+  }
