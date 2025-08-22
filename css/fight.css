@@ -164,13 +164,13 @@ progress {
 }
 
 .logs-field {
-    margin-top: 146px;
+    margin-top: 37px;
     width: 99.2%;
     height: 221px;
     overflow-y: auto;
     background-color: #1f1f2a;
     border: 1px solid #444;
-    padding: 8px;
+    padding: 8px 0 8px 8px;
     background: #111;
     color: #eee;
     font-family: monospace;
