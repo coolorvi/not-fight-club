@@ -337,5 +337,5 @@ document.getElementById('new-fight-btn').addEventListener('click', () => {
 });
 
 document.getElementById('main-page-btn').addEventListener('click', () => {
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
 });
